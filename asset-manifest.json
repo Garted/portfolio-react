@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.58fb1d7c.css",
-    "main.js": "/static/js/main.769c6583.js",
+    "main.js": "/static/js/main.f48e7446.js",
     "static/media/video.mp4": "/static/media/video.f48965b8dbb9085a97da.mp4",
     "static/media/Ubuntu-Regular.ttf": "/static/media/Ubuntu-Regular.1cbb1b79a23478cc89ad.ttf",
     "static/media/Ubuntu-Bold.ttf": "/static/media/Ubuntu-Bold.fec2d0f1431a6114a6ce.ttf",
@@ -35,10 +35,10 @@
     "static/media/ellipse-blue.svg": "/static/media/ellipse-blue.0c0133075b2e2cd58b66.svg",
     "static/media/ellipse-green.svg": "/static/media/ellipse-green.9a41098778caaecf07d8.svg",
     "main.58fb1d7c.css.map": "/static/css/main.58fb1d7c.css.map",
-    "main.769c6583.js.map": "/static/js/main.769c6583.js.map"
+    "main.f48e7446.js.map": "/static/js/main.f48e7446.js.map"
   },
   "entrypoints": [
     "static/css/main.58fb1d7c.css",
-    "static/js/main.769c6583.js"
+    "static/js/main.f48e7446.js"
   ]
 }
