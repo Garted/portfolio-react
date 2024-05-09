@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio-react/static/css/main.53272563.css",
-    "main.js": "/portfolio-react/static/js/main.5393964a.js",
+    "main.js": "/portfolio-react/static/js/main.0a036fcf.js",
     "static/media/video.mp4": "/portfolio-react/static/media/video.f48965b8dbb9085a97da.mp4",
     "static/media/Ubuntu-Regular.ttf": "/portfolio-react/static/media/Ubuntu-Regular.1cbb1b79a23478cc89ad.ttf",
     "static/media/Ubuntu-Bold.ttf": "/portfolio-react/static/media/Ubuntu-Bold.fec2d0f1431a6114a6ce.ttf",
@@ -35,10 +35,10 @@
     "static/media/ellipse-blue.svg": "/portfolio-react/static/media/ellipse-blue.0c0133075b2e2cd58b66.svg",
     "static/media/ellipse-green.svg": "/portfolio-react/static/media/ellipse-green.9a41098778caaecf07d8.svg",
     "main.53272563.css.map": "/portfolio-react/static/css/main.53272563.css.map",
-    "main.5393964a.js.map": "/portfolio-react/static/js/main.5393964a.js.map"
+    "main.0a036fcf.js.map": "/portfolio-react/static/js/main.0a036fcf.js.map"
   },
   "entrypoints": [
     "static/css/main.53272563.css",
-    "static/js/main.5393964a.js"
+    "static/js/main.0a036fcf.js"
   ]
 }
