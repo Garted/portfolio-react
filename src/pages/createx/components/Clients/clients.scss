@@ -1,0 +1,75 @@
+@import "..//..//styles/colors.scss";
+
+.clients {
+    margin-top: 120px;
+    padding-top: 80px;
+    background-color: $grey-200;
+
+    .clients__supports {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        height: 64px;
+        align-items: center;
+        .clients__supports-item {
+            width: 120px;
+            height: 64px;
+        }
+    }
+    .clients__feedback {
+        margin-top: 180px;
+        display: flex;
+        justify-content: space-between;
+        .clients__feedback-comment {
+            width: 600px;
+            .clients__feedback-title {
+                text-align: left;
+            }
+            .clients__feedback-avatar {
+                margin-top: 60px;
+                border-radius: 100%;
+            }
+            .clients__feedback-text {
+                margin-top: 24px;
+                color: $grey-800;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%;
+            }
+            .clients__feedback-nav {
+                margin-top: 24px;
+                display: flex;
+                justify-content: space-between;
+                .clients__feedback-name {
+                    text-align: left;
+                    margin-top: 0px;
+                }
+                .clients__feedback-subtitle {
+                    margin-top: 4px;
+                }
+                .clients__feedback-nav-arrows {
+                    align-self: flex-end;
+                    .clients__feedback-nav-arrows-right {
+                        width: 48px;
+                        height: 48px;
+                    }
+                    .clients__feedback-nav-arrows-left {
+                        width: 48px;
+                        height: 48px;
+                        background-color: $primary;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+        .clients__feedback-photo {
+            position: relative;
+            .clients__feedback-img {
+                border-radius: 4px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

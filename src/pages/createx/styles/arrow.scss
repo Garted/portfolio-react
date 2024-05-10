@@ -1,0 +1,32 @@
+@import "./colors.scss";
+
+.arrow-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+.left {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.right {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.white path {
+    fill: $white-color;
+}
+.active-arrow {
+    width: 48px;
+    height: 48px;
+    background-color: $primary;
+    border-radius: 100%;
+}

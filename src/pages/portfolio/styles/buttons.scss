@@ -1,0 +1,40 @@
+.button-portfolio {
+    display: block;
+    width: 100px;
+    height: 50px;
+    border-radius: 25px;
+    border: 2px solid $purple;
+    color: $purple;
+    font-size: 16px;
+    background-color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+.button-portfolio:hover {
+    transition: all 0.5s ease;
+    color: white;
+    background-color: $purple;
+}
+
+@keyframes btn-ani {
+    from {
+        position: absolute;
+        right: 0px;
+        opacity: 1;
+    }
+    to {
+        position: absolute;
+        opacity: 0;
+        right: 380px;
+        display: none;
+    }
+}
+
+.button-animation {
+    position: absolute;
+    background-color: $purple;
+    color: white;
+    right: 0px;
+    opacity: 1;
+    animation: btn-ani 1s ease forwards;
+}

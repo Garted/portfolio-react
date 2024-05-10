@@ -1,0 +1,85 @@
+@import "..//../styles/colors.scss";
+@import "..//../styles/buttons.scss";
+
+.hero {
+    height: 988px;
+    padding: 220px 0 40px 0;
+    background: url("..//..//img/hero/bg-image.webp") center center / cover
+        no-repeat;
+    box-sizing: border-box;
+    .hero__title {
+        width: 577px;
+        color: $white-color;
+        font-size: 72px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+        letter-spacing: 1px;
+        .orangeX {
+            color: $primary;
+        }
+    }
+    .hero__text {
+        margin-top: 24px;
+        width: 577px;
+        color: $white-color;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+    }
+    .hero__buttons {
+        margin-top: 60px;
+        display: flex;
+        .hero__btn-transparent {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 278px;
+            height: 52px;
+            border: 1px solid $white-color;
+            color: $white-color;
+            background-color: transparent;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 52px;
+            border-radius: 4px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        .hero__btn-transparent:hover {
+            border: 1px solid $primary;
+        }
+        .hero__btn-orange {
+            margin-left: 24px;
+        }
+    }
+    .hero__blocks {
+        margin-top: 180px;
+        display: flex;
+        .hero__blocks-item {
+            display: flex;
+            align-items: center;
+            margin-left: 4px;
+            width: 178px;
+            height: 54px;
+            border-bottom: 2px solid;
+            opacity: 0.3;
+            color: $white-color;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+            cursor: pointer;
+            .hero__blocks-item:nth-child(1) {
+                margin-left: 0px;
+            }
+        }
+        .hero__blocks-item-active {
+            opacity: 1;
+            border: 2px solid;
+        }
+    }
+}

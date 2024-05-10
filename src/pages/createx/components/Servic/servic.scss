@@ -1,0 +1,56 @@
+@import "..//../styles/title.scss";
+@import "..//../styles/colors.scss";
+
+.services {
+    background-color: $grey-200;
+    padding: 212px 0 85px 0;
+    .services__wrap {
+        position: relative;
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        row-gap: 30px;
+        .services__item {
+            padding: 90px 0 90px 0;
+            width: 285px;
+            height: 285px;
+            background: $white-color;
+            text-align: center;
+            border-radius: 4px;
+            border: 1px solid $grey-300;
+            box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),
+                0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+                0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+                0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+            .services__item-title {
+                color: $primary;
+            }
+
+            &:hover {
+                transition: 0.5s ease;
+                color: $white-color;
+                border: none;
+                background: url("../../img/servic/interior-design.webp") center;
+                .services__item-title {
+                    color: white;
+                }
+                svg {
+                    path {
+                        fill: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .services__block {
+        margin-top: 85px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        .services__btn {
+            width: 207px;
+        }
+    }
+}

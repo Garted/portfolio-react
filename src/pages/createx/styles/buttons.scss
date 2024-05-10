@@ -1,0 +1,23 @@
+@import "./colors.scss";
+.main__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 224px;
+    height: 52px;
+    background-color: $primary;
+    color: $white-color;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 52px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.main__btn:hover {
+    border: 1px solid $grey-700;
+}

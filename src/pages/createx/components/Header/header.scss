@@ -1,0 +1,320 @@
+@import "..//../styles/colors.scss";
+
+.header {
+    padding: 20px 0;
+    position: relative;
+    .createx-nav {
+        height: 52px;
+        display: flex;
+        align-items: center;
+        .header__logo {
+            width: 130px;
+            height: 22px;
+        }
+        .header__links {
+            margin-left: 55px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            .header__links-item {
+                color: $grey-800;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 26px;
+            }
+            .header__links-item:hover {
+                color: $primary;
+            }
+        }
+        .header__social-block {
+            display: flex;
+            margin-left: 172px;
+            align-items: center;
+            gap: 36px;
+            .header__call {
+                display: flex;
+                align-items: center;
+                gap: 11px;
+                .header__call-img {
+                    width: 40px;
+                    height: 40px;
+                }
+                .header__call-block {
+                    .header__call-text {
+                        color: $grey-800;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 150%;
+                    }
+                    .header__call-phone-number {
+                        color: $grey-900;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 150%;
+                    }
+                    .header__call-phone-number:hover {
+                        color: $primary;
+                    }
+                }
+            }
+            .header__talk {
+                display: flex;
+                align-items: center;
+                gap: 11px;
+                .header__talk-img {
+                    width: 40px;
+                    height: 40px;
+                }
+                .header__talk-block {
+                    .header__talk-text {
+                        color: $grey-800;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 150%;
+                    }
+                    .header__talk-email {
+                        color: $grey-900;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 150%;
+                    }
+                    .header__talk-email:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}
+.chose-menu {
+    z-index: 55;
+    padding: 10px;
+    position: absolute;
+    display: none;
+    top: calc(40vh - 180px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    height: 180px;
+    border: 1px solid var(--gray-300);
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.05),
+        0 12px 10px -6px rgba(30, 33, 44, 0.08),
+        0 26px 24px -10px rgba(30, 33, 44, 0.1),
+        0 60px 80px -20px rgba(30, 33, 44, 0.16);
+    .header__social-block {
+        display: flex;
+        gap: 12px;
+        flex-direction: column;
+        justify-content: center;
+
+        .header__call {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            .header__call-img {
+                width: 40px;
+                height: 40px;
+            }
+            .header__call-block {
+                .header__call-text {
+                    color: $grey-800;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 150%;
+                }
+                .header__call-phone-number {
+                    color: $grey-900;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                }
+                .header__call-phone-number:hover {
+                    color: $primary;
+                }
+            }
+        }
+        .header__talk {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            .header__talk-img {
+                width: 40px;
+                height: 40px;
+            }
+            .header__talk-block {
+                .header__talk-text {
+                    color: $grey-800;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 150%;
+                }
+                .header__talk-email {
+                    color: $grey-900;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                }
+                .header__talk-email:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+.chose-menu-show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@keyframes pop-ani {
+    from {
+        background-color: transparent;
+        display: none;
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.6);
+        display: block;
+    }
+}
+@keyframes pop-ani-hid {
+    from {
+        background-color: rgba(0, 0, 0, 0.6);
+        display: block;
+    }
+    to {
+        background-color: transparent;
+        display: none;
+    }
+}
+.popup {
+    animation: pop-ani-hid 1s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+.popup-show {
+    animation: pop-ani 1s ease;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: block;
+    overflow: hidden;
+}
+.side-menu {
+    padding: 20px;
+    display: block;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 60vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    transition: 1s ease;
+
+    .header__links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .header__links-item {
+            color: $grey-800;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 26px;
+        }
+        .header__links-item:hover {
+            color: $primary;
+        }
+    }
+    .header__social-block {
+        bottom: 20px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .header__call {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            .header__call-img {
+                width: 40px;
+                height: 40px;
+            }
+            .header__call-block {
+                .header__call-text {
+                    color: $grey-800;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 150%;
+                }
+                .header__call-phone-number {
+                    color: $grey-900;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                }
+                .header__call-phone-number:hover {
+                    color: $primary;
+                }
+            }
+        }
+        .header__talk {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            .header__talk-img {
+                width: 40px;
+                height: 40px;
+            }
+            .header__talk-block {
+                .header__talk-text {
+                    color: $grey-800;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 150%;
+                }
+                .header__talk-email {
+                    color: $grey-900;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                }
+                .header__talk-email:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+    .side-menu-cross {
+        position: absolute;
+        width: 20px;
+        right: 20px;
+        height: 20px;
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+.side-menu-show {
+    transition: 1s ease;
+    display: block;
+    right: 0;
+}

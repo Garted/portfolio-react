@@ -1,0 +1,81 @@
+@import "..//..//styles/buttons.scss";
+@import "..//..//styles/title.scss";
+
+.news {
+    padding-bottom: 125px;
+
+    .news__block {
+        margin-top: 60px;
+        display: flex;
+        gap: 30px;
+        .news__block-big {
+            width: 705px;
+            max-height: 540px;
+            border-radius: 4px;
+            box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),
+                0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+                0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+                0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+            .news__block-title {
+                text-align: left;
+                margin-left: 24px;
+            }
+
+            .news__block-big-text {
+                margin: 16px 24px 25px 24px;
+                color: $grey-800;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%;
+            }
+        }
+        .news__block-small {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            .news__block-small-item {
+                height: 255px;
+                padding-bottom: 24px;
+                border-radius: 4px;
+                box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.05),
+                    0px 12px 10px -6px rgba(154, 156, 165, 0.08),
+                    0px 30px 24px -10px rgba(154, 156, 165, 0.1),
+                    0px 80px 80px -20px rgba(154, 156, 165, 0.16);
+                .news__block-small-title {
+                    text-align: left;
+                    margin: 16px 0 0 24px;
+                }
+                .news__block-status-small {
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+    .news__explore {
+        margin-top: 85px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+    .news__block-status {
+        margin: 12px 0 0 24px;
+        display: flex;
+        color: $grey-700;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        align-items: center;
+        .line {
+            margin: 0 12px 0 12px;
+            width: 1px;
+            height: 12px;
+            background-color: #787a80;
+        }
+        .comment {
+            margin-left: 8px;
+        }
+    }
+}
