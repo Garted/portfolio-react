@@ -49,15 +49,17 @@ const SingleMovie = ({
                         />
                     ) : null}
                     {singleMovieInfo === null ? (
-                        <Loader size={300} />
+                        <Flex justify={"center"}>
+                            <Loader size={300} />
+                        </Flex>
                     ) : (
                         <>
                             <Flex className={style.head_links_wrap}>
                                 <Anchor
                                     component={Link}
-                                    to={"/movies"}
+                                    to={"/arrowflicks"}
                                     className={style.link}
-                                    onClick={() => setActiveTab("/movies")}
+                                    onClick={() => setActiveTab("/arrowflicks")}
                                 >
                                     Movies
                                 </Anchor>
@@ -65,7 +67,7 @@ const SingleMovie = ({
                                 <Text className={style.text}>/</Text>
                                 <Anchor
                                     component={Link}
-                                    to={`/movies/${id}`}
+                                    to={`/arrowflicks/${id}`}
                                     className={style.link}
                                 >
                                     {singleMovieInfo.title}
