@@ -10,7 +10,6 @@ import { useEffect } from "react";
 import style from "..//Movies/Movies.module.scss";
 import BurgerMenu from "../../components/burgerMenu/BurgerMenu";
 import OverlayWrap from "../../components/overlay/OverlayWrap";
-import Page404 from "../Page404/Page404";
 
 const SingleMovie = ({
     activeTab,
