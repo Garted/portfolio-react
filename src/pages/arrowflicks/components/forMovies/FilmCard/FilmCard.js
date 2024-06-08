@@ -128,6 +128,7 @@ const FilmCard = ({ filmsList, open, setRateFilm, style }) => {
                                         height="28"
                                         d="M12.9999 19.7084L5.79926 23.4942L7.17476 15.4757L1.34143 9.79753L9.39143 8.63086L12.9918 1.33569L16.5921 8.63086L24.6421 9.79753L18.8088 15.4757L20.1843 23.4942L12.9999 19.7084Z"
                                         fill={
+                                            lcData !== null &&
                                             lcData.filter(
                                                 (i) => i.id === item.id
                                             ).length > 0 &&
@@ -138,6 +139,7 @@ const FilmCard = ({ filmsList, open, setRateFilm, style }) => {
                                                 : "#D5D6DC"
                                         }
                                         stroke={
+                                            lcData !== null &&
                                             lcData.filter(
                                                 (i) => i.id === item.id
                                             ).length > 0 &&
@@ -153,7 +155,8 @@ const FilmCard = ({ filmsList, open, setRateFilm, style }) => {
                                     />
                                 </svg>
                                 <Text className={style.rate_film_mark}>
-                                    {lcData.filter((i) => i.id === item.id)
+                                    {lcData !== null &&
+                                    lcData.filter((i) => i.id === item.id)
                                         .length > 0
                                         ? lcData.filter(
                                               (i) => i.id === item.id
