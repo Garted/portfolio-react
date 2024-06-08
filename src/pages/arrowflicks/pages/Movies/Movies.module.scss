@@ -1,0 +1,3534 @@
+@import "..//../colors/colors.scss";
+
+.movies {
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+
+    .movies_wrap {
+        padding: 40px 90px 82px 90px;
+        width: 1160px;
+        .movies_title {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 140%;
+            width: 980px;
+        }
+        .filters_wrap {
+            display: flex;
+            width: 980px;
+            gap: 16px;
+            margin-top: 40px;
+            .loader_wrap {
+                width: 980px;
+                display: flex;
+                justify-content: start;
+                margin-top: 40px;
+            }
+            .root {
+                height: 72px;
+                flex-grow: 1;
+                flex-shrink: 1;
+
+                .label {
+                    margin-bottom: 8px;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 140%;
+                }
+                .wrapper {
+                    height: 42px;
+                    .input {
+                        border-radius: 8px;
+                        height: 100%;
+                    }
+                    .right_section {
+                        display: flex;
+                    }
+                    .placeholder {
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 143%;
+                        color: $grey500;
+                    }
+                }
+            }
+            .ratings_wrap {
+                display: flex;
+                gap: 8px;
+                flex-grow: 1;
+                flex-shrink: 1;
+
+                .rating_root {
+                    height: 72px;
+                    flex: 1;
+                    max-width: 137px;
+                    .rating_label {
+                        margin-bottom: 8px;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 140%;
+                    }
+                    .rating_wrapper {
+                        height: 42px;
+                        max-width: 137px;
+                        .rating_input {
+                            border-radius: 8px;
+                            height: 100%;
+                        }
+                        .rating_right_section {
+                            display: flex;
+                            .rating_wrap {
+                                display: flex;
+                                flex-wrap: wrap;
+                                gap: 2px;
+                                right: 12px;
+                                flex-direction: column;
+                                .wrap {
+                                    display: flex;
+                                    width: 12px;
+                                    height: 12px;
+                                    align-items: center;
+                                }
+                            }
+                        }
+                        .rating_placeholder {
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 143%;
+                        }
+                    }
+                }
+            }
+            .reset_filter {
+                width: 82px;
+                margin-top: auto;
+                background-color: transparent;
+                height: 42px;
+                padding: 0;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 143%;
+            }
+        }
+        .sort_by {
+            display: flex;
+            justify-content: end;
+            width: 980px;
+            margin-top: 24px;
+            .root {
+                height: 72px;
+                width: 283px;
+                .label {
+                    margin-bottom: 8px;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 140%;
+                }
+                .wrapper {
+                    height: 42px;
+                    width: 283px;
+                    .input {
+                        border-radius: 8px;
+                        height: 100%;
+                    }
+                    .right_section {
+                        display: flex;
+                    }
+                    .placeholder {
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 143%;
+                    }
+                }
+            }
+        }
+        .cards_wrap {
+            display: flex;
+            margin-top: 24px;
+            gap: 16px;
+            width: 980px;
+            background-color: inherit;
+            flex-wrap: wrap;
+            flex-direction: row;
+            .loader_wrap {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin-top: 24px;
+                .loader {
+                    display: block;
+                    width: var(--loader-size);
+                    height: var(--loader-size);
+                }
+            }
+            .empty_films_list {
+                margin-top: 24px;
+                height: 400px;
+                background-color: transparent;
+                width: 100%;
+                .empty_img {
+                    display: flex;
+                    justify-content: center;
+                }
+                .empty_text {
+                    text-align: center;
+                    margin-top: 16px;
+                    font-weight: 600;
+                    font-size: 20px;
+                    font-family: "Poppins";
+                }
+            }
+
+            .card_wrap {
+                display: flex;
+                padding: 24px;
+                width: 482px;
+                height: 218px;
+                background-color: white;
+                border-radius: 10px;
+                gap: 8px;
+
+                .card {
+                    display: flex;
+                    height: 170px;
+                    gap: 16px;
+                    width: 398px;
+
+                    .card_img {
+                        width: 119px;
+                        height: 170px;
+                        border-radius: none;
+                    }
+                    .empty_img {
+                        display: flex;
+                        width: 119px;
+                        height: 170px;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 4px;
+                        border: 1px solid grey;
+                        .text {
+                            font-weight: 500;
+                            font-size: 12px;
+                            line-height: 133%;
+                            color: grey;
+                        }
+                    }
+                    .card_descr {
+                        display: flex;
+                        gap: 8px;
+                        flex-direction: column;
+                        row-gap: 8px;
+                        width: 100%;
+                        .card_title {
+                            font-weight: 600;
+                            font-family: "Poppins";
+                            font-size: 24px;
+                        }
+                        .card_year {
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 125%;
+                        }
+                        .card_rating_wrap {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+                            .card_rating {
+                                display: flex;
+                                align-items: center;
+                                gap: 4px;
+                                .card_rating_text {
+                                    line-height: 125%;
+                                    font-weight: 400;
+                                    font-size: 16px;
+                                }
+                                .card_rating_text_grey {
+                                    line-height: 125%;
+                                    font-weight: 600;
+                                    font-size: 16px;
+                                    font-family: "Poppins";
+                                }
+                            }
+                        }
+                        .card_genres_wrap {
+                            display: flex;
+                            gap: 8px;
+                            align-items: center;
+                            margin-top: auto;
+
+                            .genres_left {
+                                font-weight: 400;
+                                font-size: 16px;
+                            }
+                            .genres_right {
+                                font-weight: 400;
+                                font-size: 16px;
+                                color: black;
+                            }
+                        }
+                    }
+                }
+                .rate_film_wrap {
+                    display: flex;
+                    height: 28px;
+                    align-items: center;
+                    gap: 4px;
+                    .rate_film_mark {
+                        font-family: "Poppins";
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 125%;
+                    }
+                }
+            }
+        }
+        .pagination {
+            display: flex;
+            margin-top: 24px;
+            justify-content: end;
+        }
+    }
+    .left_side_wrap {
+        width: 280px;
+        min-height: 100vh;
+        padding: 26px 24px;
+        background-color: $purple100;
+        .logo {
+            background-color: transparent;
+        }
+        .left_side_tabs {
+            display: flex;
+            width: 100%;
+            margin-top: 60px;
+
+            .left_side_tab_active {
+                background-color: $purple200;
+                color: $purple500;
+                font-weight: 700;
+                border-radius: 8px;
+                width: 232px;
+                height: 42px;
+            }
+            .left_side_tab {
+                background-color: transparent;
+                color: black;
+                font-weight: 400;
+                width: 232px;
+                height: 42px;
+            }
+        }
+    }
+}
+.single_film_wrap {
+    display: flex;
+    padding: 40px 180px 82px 180px;
+    width: 1160px;
+    flex-direction: column;
+    gap: 20px;
+    .head_links_wrap {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        .link {
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 143%;
+            color: $purple500;
+        }
+        .text {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 100%;
+        }
+    }
+    .single_card_info {
+        display: flex;
+        padding: 24px;
+        background-color: white;
+        gap: 16px;
+        flex-direction: row;
+        .single_card {
+            display: flex;
+            width: 702px;
+            height: 352px;
+            gap: 16px;
+            .empty_card_img {
+                display: flex;
+                width: 250px;
+                height: 352px;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                gap: 4px;
+                background-color: $grey200;
+                border: 2px solid $grey100;
+
+                .empty_card_text {
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 133%;
+                    color: $grey500;
+                }
+            }
+            .card_img {
+                width: 250px;
+                height: 352px;
+            }
+            .single_card_descr {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .single_card_title {
+                    font-weight: 600;
+                    font-size: 20px;
+                    color: $purple500;
+                    font-family: "Poppins";
+                }
+                .single_card_year {
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: $grey600;
+                    line-height: 125%;
+                }
+                .single_stats {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    .single_star {
+                        display: flex;
+                        align-items: center;
+                        gap: 4px;
+                        .single_star_text {
+                            font-weight: 600;
+                            font-size: 16px;
+                            line-height: 125%;
+                            color: black;
+                            font-family: "Poppins";
+                        }
+                    }
+                    .single_vote {
+                        line-height: 125%;
+                        font-weight: 400;
+                        font-size: 16px;
+                        color: $grey600;
+                    }
+                }
+                .single_prop {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: auto;
+
+                    .single_prop_wrap {
+                        display: flex;
+                        gap: 8px;
+                        .prop_name {
+                            min-width: 140px;
+                            font-weight: 400;
+                            font-size: 16px;
+                            color: $grey600;
+                        }
+                        .prop_value {
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 125%;
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+        .single_mark_wrap {
+            display: flex;
+            height: 28px;
+            align-items: center;
+            gap: 4px;
+            .mark_text {
+                font-weight: 600;
+                font-family: "Poppins";
+                font-size: 16px;
+                line-height: 125%;
+            }
+        }
+    }
+    .trailer_block {
+        display: flex;
+        padding: 24px;
+        background-color: #fff;
+        flex-direction: column;
+        row-gap: 20px;
+        .trailer_title {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 100%;
+        }
+        .empty_trailer {
+            width: 500px;
+            height: 317px;
+            .empty_trailer_text {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 140%;
+            }
+        }
+        .video_block {
+            width: 500px;
+            height: 317px;
+            border-radius: 8px;
+        }
+        .trailer_descr {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 140%;
+        }
+        .production_wrap {
+            display: flex;
+            gap: 12px;
+            flex-direction: column;
+            .production_item {
+                display: flex;
+                height: 40px;
+                gap: 8px;
+                align-items: center;
+                .production_item_img {
+                    max-width: 40px;
+                    max-height: 40px;
+                }
+                .production_item_text {
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 140%;
+                }
+            }
+        }
+    }
+}
+.rated_search_wrap {
+    display: flex;
+    gap: 278px;
+    align-items: center;
+    .rated_title {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 140%;
+        width: 212px;
+    }
+    .rated_searchpanel {
+        width: 490px;
+        height: 48px;
+        padding: 0 12px 0 0;
+        background-color: white;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .searchpanel_input {
+            min-width: 370px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 143%;
+            cursor: pointer;
+            caret-color: red;
+        }
+        .search_button {
+            width: 88px;
+            height: 32px;
+            border-radius: 8px;
+            font-family: "Poppins";
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 140%;
+        }
+    }
+}
+.dropdown {
+    padding: 4px;
+    border-radius: 8px;
+}
+.option {
+    max-width: 267px;
+    border-radius: 8px;
+}
+.scroll_area {
+    max-height: 275px;
+}
+.page404 {
+    padding: 24px;
+    height: 100vh;
+    .page404_logo {
+        background-color: transparent;
+        a {
+            .page404_svg {
+                width: 179px;
+                height: 36px;
+            }
+        }
+    }
+    .page404_img {
+        width: 656px;
+        height: 196px;
+        text-align: center;
+        margin: 228px auto 0;
+    }
+    .page404_text {
+        text-align: center;
+        margin-top: 48px;
+        font-weight: 600;
+        font-size: 20px;
+        font-family: "Poppins";
+    }
+    .page404_button {
+        margin: 16px auto 0 auto;
+        display: block;
+        width: 103px;
+        height: 40px;
+        border-radius: 8px;
+        font-family: "Poppins";
+        background-color: $purple500;
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 1439px) and (min-width: 1200px) {
+    .movies {
+        width: 1140px;
+        .movies_wrap {
+            padding: 20px 40px 82px 40px;
+            width: 920px;
+            .movies_title {
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 140%;
+                width: 100%;
+            }
+            .filters_wrap {
+                display: flex;
+                width: 100%;
+                gap: 16px;
+                margin-top: 30px;
+                .loader_wrap {
+                    width: 100%;
+                    display: flex;
+                    justify-content: start;
+                    margin-top: 40px;
+                }
+                .root {
+                    height: 72px;
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    .label {
+                        margin-bottom: 8px;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 140%;
+                    }
+                    .wrapper {
+                        height: 42px;
+                        .input {
+                            border-radius: 8px;
+                            height: 100%;
+                        }
+                        .right_section {
+                            display: flex;
+                        }
+                        .placeholder {
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 143%;
+                            color: $grey500;
+                        }
+                    }
+                }
+                .ratings_wrap {
+                    display: flex;
+                    gap: 8px;
+                    flex-grow: 1;
+                    flex-shrink: 1;
+
+                    .rating_root {
+                        height: 72px;
+                        flex: 1;
+                        max-width: 137px;
+                        .rating_label {
+                            margin-bottom: 8px;
+                            font-weight: 700;
+                            font-size: 16px;
+                            line-height: 140%;
+                        }
+                        .rating_wrapper {
+                            height: 42px;
+                            max-width: 137px;
+                            .rating_input {
+                                border-radius: 8px;
+                                height: 100%;
+                            }
+                            .rating_right_section {
+                                display: flex;
+                                .rating_wrap {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    gap: 2px;
+                                    right: 12px;
+                                    flex-direction: column;
+                                    .wrap {
+                                        display: flex;
+                                        width: 12px;
+                                        height: 12px;
+                                        align-items: center;
+                                    }
+                                }
+                            }
+                            .rating_placeholder {
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 143%;
+                            }
+                        }
+                    }
+                }
+                .reset_filter {
+                    width: 82px;
+                    margin-top: auto;
+                    background-color: transparent;
+                    height: 42px;
+                    padding: 0;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 143%;
+                }
+            }
+            .sort_by {
+                display: flex;
+                justify-content: end;
+                width: 100%;
+                margin-top: 24px;
+                .root {
+                    height: 72px;
+                    width: 283px;
+                    .label {
+                        margin-bottom: 8px;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 140%;
+                    }
+                    .wrapper {
+                        height: 42px;
+                        width: 283px;
+                        .input {
+                            border-radius: 8px;
+                            height: 100%;
+                        }
+                        .right_section {
+                            display: flex;
+                        }
+                        .placeholder {
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 143%;
+                        }
+                    }
+                }
+            }
+            .cards_wrap {
+                display: flex;
+                margin-top: 24px;
+                gap: 16px;
+                width: 100%;
+                background-color: inherit;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                flex-direction: row;
+                .loader_wrap {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    margin-top: 24px;
+                    .loader {
+                        display: block;
+                        width: var(--loader-size);
+                        height: var(--loader-size);
+                    }
+                }
+                .empty_films_list {
+                    margin-top: 24px;
+                    height: 400px;
+                    background-color: transparent;
+                    width: 100%;
+                    .empty_img {
+                        display: flex;
+                        justify-content: center;
+                    }
+                    .empty_text {
+                        text-align: center;
+                        margin-top: 16px;
+                        font-weight: 600;
+                        font-size: 20px;
+                        font-family: "Poppins";
+                    }
+                }
+
+                .card_wrap {
+                    display: flex;
+                    padding: 8px;
+                    width: 410px;
+                    height: 210px;
+                    background-color: white;
+                    border-radius: 10px;
+                    gap: 10px;
+
+                    .card {
+                        display: flex;
+                        height: 170px;
+                        gap: 10px;
+                        width: 340px;
+
+                        .card_img {
+                            width: 105px;
+                            height: 170px;
+                            border-radius: none;
+                        }
+                        .empty_img {
+                            display: flex;
+                            width: 105px;
+                            height: 170px;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 4px;
+                            border: 1px solid grey;
+                            .text {
+                                font-weight: 500;
+                                font-size: 12px;
+                                line-height: 133%;
+                                color: grey;
+                            }
+                        }
+                        .card_descr {
+                            display: flex;
+                            gap: 6px;
+                            flex-direction: column;
+                            row-gap: 6px;
+                            width: 225px;
+                            .card_title {
+                                font-weight: 600;
+                                font-family: "Poppins";
+                                font-size: 22px;
+                                width: 225px;
+                            }
+                            .card_year {
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: 125%;
+                            }
+                            .card_rating_wrap {
+                                display: flex;
+                                align-items: center;
+                                gap: 8px;
+                                .card_rating {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 4px;
+                                    .card_rating_text {
+                                        line-height: 125%;
+                                        font-weight: 400;
+                                        font-size: 16px;
+                                    }
+                                    .card_rating_text_grey {
+                                        line-height: 125%;
+                                        font-weight: 600;
+                                        font-size: 16px;
+                                        font-family: "Poppins";
+                                    }
+                                }
+                            }
+                            .card_genres_wrap {
+                                display: flex;
+                                gap: 8px;
+                                align-items: center;
+                                margin-top: auto;
+
+                                .genres_left {
+                                    font-weight: 400;
+                                    font-size: 16px;
+                                }
+                                .genres_right {
+                                    font-weight: 400;
+                                    font-size: 16px;
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                    .rate_film_wrap {
+                        display: flex;
+                        height: 28px;
+                        align-items: center;
+                        gap: 4px;
+                        .rate_film_mark {
+                            font-family: "Poppins";
+                            font-weight: 600;
+                            font-size: 16px;
+                            line-height: 125%;
+                        }
+                    }
+                }
+            }
+            .pagination {
+                display: flex;
+                margin-top: 24px;
+                justify-content: end;
+            }
+        }
+        .left_side_wrap {
+            width: 220px;
+            min-height: 100vh;
+            padding: 26px 24px;
+            background-color: $purple100;
+            .logo {
+                background-color: transparent;
+            }
+            .left_side_tabs {
+                display: flex;
+                width: 100%;
+                margin-top: 60px;
+
+                .left_side_tab_active {
+                    background-color: $purple200;
+                    color: $purple500;
+                    font-weight: 700;
+                    border-radius: 8px;
+                    width: 180px;
+                    height: 42px;
+                }
+                .left_side_tab {
+                    background-color: transparent;
+                    color: black;
+                    font-weight: 400;
+                    width: 180px;
+                    height: 42px;
+                }
+            }
+        }
+    }
+    .single_film_wrap {
+        display: flex;
+        padding: 20px 90px 42px 90px;
+        width: 920px;
+        flex-direction: column;
+        gap: 20px;
+        .head_links_wrap {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            .link {
+                text-decoration: none;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 143%;
+                color: $purple500;
+            }
+            .text {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 100%;
+            }
+        }
+        .single_card_info {
+            display: flex;
+            padding: 24px;
+            background-color: white;
+            gap: 16px;
+            flex-direction: row;
+            .single_card {
+                display: flex;
+                width: 702px;
+                height: 352px;
+                gap: 16px;
+                .empty_card_img {
+                    display: flex;
+                    width: 250px;
+                    height: 352px;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 4px;
+                    background-color: $grey200;
+                    border: 2px solid $grey100;
+
+                    .empty_card_text {
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 133%;
+                        color: $grey500;
+                    }
+                }
+                .card_img {
+                    width: 250px;
+                    height: 352px;
+                }
+                .single_card_descr {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    .single_card_title {
+                        font-weight: 600;
+                        font-size: 20px;
+                        color: $purple500;
+                        font-family: "Poppins";
+                    }
+                    .single_card_year {
+                        font-weight: 400;
+                        font-size: 16px;
+                        color: $grey600;
+                        line-height: 125%;
+                    }
+                    .single_stats {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        .single_star {
+                            display: flex;
+                            align-items: center;
+                            gap: 4px;
+                            .single_star_text {
+                                font-weight: 600;
+                                font-size: 16px;
+                                line-height: 125%;
+                                color: black;
+                                font-family: "Poppins";
+                            }
+                        }
+                        .single_vote {
+                            line-height: 125%;
+                            font-weight: 400;
+                            font-size: 16px;
+                            color: $grey600;
+                        }
+                    }
+                    .single_prop {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: auto;
+
+                        .single_prop_wrap {
+                            display: flex;
+                            gap: 8px;
+                            .prop_name {
+                                min-width: 140px;
+                                font-weight: 400;
+                                font-size: 16px;
+                                color: $grey600;
+                            }
+                            .prop_value {
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 125%;
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+            .single_mark_wrap {
+                display: flex;
+                height: 28px;
+                align-items: center;
+                gap: 4px;
+                .mark_text {
+                    font-weight: 600;
+                    font-family: "Poppins";
+                    font-size: 16px;
+                    line-height: 125%;
+                }
+            }
+        }
+        .trailer_block {
+            display: flex;
+            padding: 24px;
+            background-color: #fff;
+            flex-direction: column;
+            row-gap: 20px;
+            .trailer_title {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 100%;
+            }
+            .empty_trailer {
+                width: 500px;
+                height: 317px;
+                .empty_trailer_text {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 140%;
+                }
+            }
+            .video_block {
+                width: 500px;
+                height: 317px;
+                border-radius: 8px;
+            }
+            .trailer_descr {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 140%;
+            }
+            .production_wrap {
+                display: flex;
+                gap: 12px;
+                flex-direction: column;
+                .production_item {
+                    display: flex;
+                    height: 40px;
+                    gap: 8px;
+                    align-items: center;
+                    .production_item_img {
+                        max-width: 40px;
+                        max-height: 40px;
+                    }
+                    .production_item_text {
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 140%;
+                    }
+                }
+            }
+        }
+    }
+    .rated_search_wrap {
+        display: flex;
+        gap: 0;
+        justify-content: space-between;
+        align-items: center;
+        .rated_title {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 140%;
+            width: 100%;
+        }
+        .rated_searchpanel {
+            width: 490px;
+            height: 48px;
+            padding: 0 12px 0 0;
+            background-color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .searchpanel_input {
+                min-width: 370px;
+                border: none;
+                border-radius: 8px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 143%;
+                cursor: pointer;
+                caret-color: red;
+            }
+            .search_button {
+                width: 88px;
+                height: 32px;
+                border-radius: 8px;
+                font-family: "Poppins";
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 140%;
+            }
+        }
+    }
+    .dropdown {
+        padding: 4px;
+        border-radius: 8px;
+    }
+    .option {
+        max-width: 267px;
+        border-radius: 8px;
+    }
+    .scroll_area {
+        max-height: 260px;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 993px) {
+    .movies {
+        width: 960px;
+        .movies_wrap {
+            padding: 20px 20px 82px 20px;
+            width: 960px;
+            .movies_title {
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 140%;
+                width: 100%;
+            }
+            .filters_wrap {
+                display: flex;
+                width: 100%;
+                gap: 10px;
+                margin-top: 30px;
+                .loader_wrap {
+                    width: 100%;
+                    display: flex;
+                    justify-content: start;
+                    margin-top: 40px;
+                }
+                .root {
+                    height: 72px;
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    .label {
+                        margin-bottom: 8px;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 140%;
+                    }
+                    .wrapper {
+                        height: 42px;
+                        .input {
+                            border-radius: 8px;
+                            height: 100%;
+                        }
+                        .right_section {
+                            display: flex;
+                        }
+                        .placeholder {
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 143%;
+                            color: $grey500;
+                        }
+                    }
+                }
+                .ratings_wrap {
+                    display: flex;
+                    gap: 6px;
+                    flex-grow: 1;
+                    flex-shrink: 1;
+
+                    .rating_root {
+                        height: 72px;
+                        flex: 1;
+                        max-width: 137px;
+                        .rating_label {
+                            margin-bottom: 8px;
+                            font-weight: 700;
+                            font-size: 16px;
+                            line-height: 140%;
+                        }
+                        .rating_wrapper {
+                            height: 42px;
+                            max-width: 137px;
+                            .rating_input {
+                                border-radius: 8px;
+                                height: 100%;
+                            }
+                            .rating_right_section {
+                                display: flex;
+                                .rating_wrap {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    gap: 2px;
+                                    right: 12px;
+                                    flex-direction: column;
+                                    .wrap {
+                                        display: flex;
+                                        width: 12px;
+                                        height: 12px;
+                                        align-items: center;
+                                    }
+                                }
+                            }
+                            .rating_placeholder {
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 143%;
+                            }
+                        }
+                    }
+                }
+                .reset_filter {
+                    width: 82px;
+                    margin-top: auto;
+                    background-color: transparent;
+                    height: 42px;
+                    padding: 0;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 143%;
+                }
+            }
+            .sort_by {
+                display: flex;
+                justify-content: end;
+                width: 100%;
+                margin-top: 24px;
+                .root {
+                    height: 72px;
+                    width: 283px;
+                    .label {
+                        margin-bottom: 8px;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 140%;
+                    }
+                    .wrapper {
+                        height: 42px;
+                        width: 283px;
+                        .input {
+                            border-radius: 8px;
+                            height: 100%;
+                        }
+                        .right_section {
+                            display: flex;
+                        }
+                        .placeholder {
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 143%;
+                        }
+                    }
+                }
+            }
+            .cards_wrap {
+                display: flex;
+                margin-top: 24px;
+                gap: 16px;
+                width: 100%;
+                background-color: inherit;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                flex-direction: row;
+                .loader_wrap {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    margin-top: 24px;
+                    .loader {
+                        display: block;
+                        width: var(--loader-size);
+                        height: var(--loader-size);
+                    }
+                }
+                .empty_films_list {
+                    margin-top: 24px;
+                    height: 400px;
+                    background-color: transparent;
+                    width: 100%;
+                    .empty_img {
+                        display: flex;
+                        justify-content: center;
+                    }
+                    .empty_text {
+                        text-align: center;
+                        margin-top: 16px;
+                        font-weight: 600;
+                        font-size: 20px;
+                        font-family: "Poppins";
+                    }
+                }
+
+                .card_wrap {
+                    display: flex;
+                    padding: 5px;
+                    width: 350px;
+                    height: 175px;
+                    background-color: white;
+                    border-radius: 10px;
+                    gap: 6px;
+
+                    .card {
+                        display: flex;
+                        height: 155px;
+                        gap: 5px;
+                        width: 290px;
+
+                        .card_img {
+                            width: 90px;
+                            height: 155px;
+                            border-radius: none;
+                        }
+                        .empty_img {
+                            display: flex;
+                            width: 105px;
+                            height: 170px;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 4px;
+                            border: 1px solid grey;
+                            .text {
+                                font-weight: 500;
+                                font-size: 12px;
+                                line-height: 133%;
+                                color: grey;
+                            }
+                        }
+                        .card_descr {
+                            display: flex;
+                            gap: 6px;
+                            flex-direction: column;
+                            row-gap: 6px;
+                            width: 195px;
+                            .card_title {
+                                font-weight: 600;
+                                font-family: "Poppins";
+                                font-size: 18px;
+                            }
+                            .card_year {
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: 125%;
+                            }
+                            .card_rating_wrap {
+                                display: flex;
+                                align-items: center;
+                                gap: 8px;
+                                .card_rating {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 4px;
+                                    .card_rating_text {
+                                        line-height: 125%;
+                                        font-weight: 400;
+                                        font-size: 16px;
+                                    }
+                                    .card_rating_text_grey {
+                                        line-height: 125%;
+                                        font-weight: 600;
+                                        font-size: 16px;
+                                        font-family: "Poppins";
+                                    }
+                                }
+                            }
+                            .card_genres_wrap {
+                                display: flex;
+                                gap: 8px;
+                                align-items: center;
+                                margin-top: auto;
+                                height: auto;
+
+                                .genres_left {
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                }
+                                .genres_right {
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                    .rate_film_wrap {
+                        width: 43px;
+                        display: flex;
+                        height: 28px;
+                        gap: 3px;
+                        justify-content: end;
+                        align-items: center;
+
+                        .rate_film_mark {
+                            font-family: "Poppins";
+                            font-weight: 600;
+                            font-size: 16px;
+                            line-height: 125%;
+                        }
+                    }
+                }
+            }
+            .pagination {
+                display: flex;
+                margin-top: 24px;
+                justify-content: end;
+            }
+        }
+        .left_side_wrap {
+            width: 200px;
+            min-height: 100vh;
+            padding: 26px 24px;
+            background-color: $purple100;
+            .logo {
+                background-color: transparent;
+                width: 100%;
+                svg {
+                    width: 160px;
+                }
+            }
+            .left_side_tabs {
+                display: flex;
+                width: 100%;
+                margin-top: 60px;
+
+                .left_side_tab_active {
+                    background-color: $purple200;
+                    color: $purple500;
+                    font-weight: 700;
+                    border-radius: 8px;
+                    width: 160px;
+                    height: 42px;
+                }
+                .left_side_tab {
+                    background-color: transparent;
+                    color: black;
+                    font-weight: 400;
+                    width: 160px;
+                    height: 42px;
+                }
+            }
+        }
+    }
+    .single_film_wrap {
+        display: flex;
+        padding: 20px 45px 42px 45px; //change
+        width: 760px; //change
+        flex-direction: column;
+        gap: 20px;
+        .head_links_wrap {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            .link {
+                text-decoration: none;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 143%;
+                color: $purple500;
+            }
+            .text {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 100%;
+            }
+        }
+        .single_card_info {
+            display: flex;
+            padding: 24px;
+            background-color: white;
+            gap: 16px;
+            flex-direction: row;
+            .single_card {
+                display: flex;
+                width: 702px;
+                height: 352px;
+                gap: 16px;
+                .empty_card_img {
+                    display: flex;
+                    width: 250px;
+                    height: 352px;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 4px;
+                    background-color: $grey200;
+                    border: 2px solid $grey100;
+
+                    .empty_card_text {
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 133%;
+                        color: $grey500;
+                    }
+                }
+                .card_img {
+                    width: 250px;
+                    height: 352px;
+                }
+                .single_card_descr {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    .single_card_title {
+                        font-weight: 600;
+                        font-size: 20px;
+                        color: $purple500;
+                        font-family: "Poppins";
+                    }
+                    .single_card_year {
+                        font-weight: 400;
+                        font-size: 16px;
+                        color: $grey600;
+                        line-height: 125%;
+                    }
+                    .single_stats {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        .single_star {
+                            display: flex;
+                            align-items: center;
+                            gap: 4px;
+                            .single_star_text {
+                                font-weight: 600;
+                                font-size: 16px;
+                                line-height: 125%;
+                                color: black;
+                                font-family: "Poppins";
+                            }
+                        }
+                        .single_vote {
+                            line-height: 125%;
+                            font-weight: 400;
+                            font-size: 16px;
+                            color: $grey600;
+                        }
+                    }
+                    .single_prop {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: auto;
+
+                        .single_prop_wrap {
+                            display: flex;
+                            gap: 8px;
+                            .prop_name {
+                                min-width: 140px;
+                                font-weight: 400;
+                                font-size: 16px;
+                                color: $grey600;
+                            }
+                            .prop_value {
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 125%;
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+            .single_mark_wrap {
+                display: flex;
+                height: 28px;
+                align-items: center;
+                gap: 4px;
+                .mark_text {
+                    font-weight: 600;
+                    font-family: "Poppins";
+                    font-size: 16px;
+                    line-height: 125%;
+                }
+            }
+        }
+        .trailer_block {
+            display: flex;
+            padding: 24px;
+            background-color: #fff;
+            flex-direction: column;
+            row-gap: 20px;
+            .trailer_title {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 100%;
+            }
+            .empty_trailer {
+                width: 500px;
+                height: 317px;
+                .empty_trailer_text {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 140%;
+                }
+            }
+            .video_block {
+                width: 500px;
+                height: 317px;
+                border-radius: 8px;
+            }
+            .trailer_descr {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 140%;
+            }
+            .production_wrap {
+                display: flex;
+                gap: 12px;
+                flex-direction: column;
+                .production_item {
+                    display: flex;
+                    height: 40px;
+                    gap: 8px;
+                    align-items: center;
+                    .production_item_img {
+                        max-width: 40px;
+                        max-height: 40px;
+                    }
+                    .production_item_text {
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 140%;
+                    }
+                }
+            }
+        }
+    }
+    .rated_search_wrap {
+        display: flex;
+        gap: 0;
+        justify-content: space-between;
+        align-items: center;
+        .rated_title {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 140%;
+            width: 100%;
+        }
+        .rated_searchpanel {
+            width: 490px;
+            height: 48px;
+            padding: 0 12px 0 0;
+            background-color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .searchpanel_input {
+                min-width: 370px;
+                border: none;
+                border-radius: 8px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 143%;
+                cursor: pointer;
+                caret-color: red;
+            }
+            .search_button {
+                width: 88px;
+                height: 32px;
+                border-radius: 8px;
+                font-family: "Poppins";
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 140%;
+            }
+        }
+    }
+    .dropdown {
+        padding: 4px;
+        border-radius: 8px;
+    }
+    .option {
+        max-width: 267px;
+        border-radius: 8px;
+    }
+    .scroll_area {
+        max-height: 260px;
+    }
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+    .movies {
+        width: 750px;
+        .movies_wrap {
+            padding: 20px 20px 82px 20px;
+            width: 750px;
+
+            .movies_title {
+                margin-top: 20px;
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 140%;
+                width: 100%;
+            }
+            .filters_wrap {
+                display: grid;
+                width: 100%;
+                column-gap: 10px;
+                grid-template-columns: repeat(2, 350px);
+                grid-template-rows: repeat(2, 72px);
+
+                margin-top: 30px;
+                .loader_wrap {
+                    width: 90%;
+                    display: flex;
+                    justify-content: start;
+                    margin-top: 40px;
+                }
+                .root {
+                    .label {
+                        margin-bottom: 8px;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 140%;
+                    }
+                    .wrapper {
+                        height: 42px;
+                        .input {
+                            border-radius: 8px;
+                            height: 100%;
+                        }
+                        .right_section {
+                            display: flex;
+                        }
+                        .placeholder {
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 143%;
+                            color: $grey500;
+                        }
+                    }
+                }
+                .ratings_wrap {
+                    display: grid;
+                    grid-template-columns: 170px 170px;
+                    column-gap: 10px;
+                    flex: none;
+                    .rating_root {
+                        max-width: 170px;
+                        .rating_label {
+                            margin-bottom: 8px;
+                            font-weight: 700;
+                            font-size: 16px;
+                            line-height: 140%;
+                        }
+                        .rating_wrapper {
+                            height: 42px;
+                            max-width: 170px;
+
+                            .rating_input {
+                                border-radius: 8px;
+                                height: 100%;
+                            }
+                            .rating_right_section {
+                                display: flex;
+                                .rating_wrap {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    gap: 2px;
+                                    right: 12px;
+                                    flex-direction: column;
+                                    .wrap {
+                                        display: flex;
+                                        width: 12px;
+                                        height: 12px;
+                                        align-items: center;
+                                    }
+                                }
+                            }
+                            .rating_placeholder {
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 143%;
+                            }
+                        }
+                    }
+                }
+                .reset_filter {
+                    width: 82px;
+                    margin: auto 0 0 auto;
+                    background-color: transparent;
+                    height: 42px;
+                    padding: 0;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 143%;
+                }
+            }
+            .sort_by {
+                display: flex;
+                justify-content: end;
+                width: 100%;
+                margin-top: 24px;
+                .root {
+                    height: 72px;
+                    width: 283px;
+                    .label {
+                        margin-bottom: 8px;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 140%;
+                    }
+                    .wrapper {
+                        height: 42px;
+                        width: 283px;
+                        .input {
+                            border-radius: 8px;
+                            height: 100%;
+                        }
+                        .right_section {
+                            display: flex;
+                        }
+                        .placeholder {
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 143%;
+                        }
+                    }
+                }
+            }
+            .cards_wrap {
+                display: flex;
+                margin-top: 24px;
+                gap: 16px;
+                width: 100%;
+                background-color: inherit;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                flex-direction: row;
+                .loader_wrap {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    margin-top: 24px;
+                    .loader {
+                        display: block;
+                        width: var(--loader-size);
+                        height: var(--loader-size);
+                    }
+                }
+                .empty_films_list {
+                    margin-top: 24px;
+                    height: 400px;
+                    background-color: transparent;
+                    width: 100%;
+                    .empty_img {
+                        display: flex;
+                        justify-content: center;
+                    }
+                    .empty_text {
+                        text-align: center;
+                        margin-top: 16px;
+                        font-weight: 600;
+                        font-size: 20px;
+                        font-family: "Poppins";
+                    }
+                }
+
+                .card_wrap {
+                    display: flex;
+                    padding: 5px;
+                    width: 345px;
+                    height: 170px;
+                    background-color: white;
+                    border-radius: 10px;
+                    gap: 4px;
+
+                    .card {
+                        display: flex;
+                        height: 155px;
+                        gap: 5px;
+                        width: 290px;
+
+                        .card_img {
+                            width: 85px;
+                            height: 150px;
+                            border-radius: none;
+                        }
+                        .empty_img {
+                            display: flex;
+                            width: 85px;
+                            height: 150px;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 4px;
+                            border: 1px solid grey;
+                            .text {
+                                font-weight: 500;
+                                font-size: 12px;
+                                line-height: 133%;
+                                color: grey;
+                            }
+                        }
+                        .card_descr {
+                            display: flex;
+                            gap: 5px;
+                            flex-direction: column;
+                            row-gap: 5px;
+                            width: 190px;
+                            .card_title {
+                                font-weight: 600;
+                                font-family: "Poppins";
+                                font-size: 18px;
+                            }
+                            .card_year {
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: 125%;
+                            }
+                            .card_rating_wrap {
+                                display: flex;
+                                align-items: center;
+                                gap: 8px;
+                                .card_rating {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 4px;
+                                    .card_rating_text {
+                                        line-height: 125%;
+                                        font-weight: 400;
+                                        font-size: 16px;
+                                    }
+                                    .card_rating_text_grey {
+                                        line-height: 125%;
+                                        font-weight: 600;
+                                        font-size: 16px;
+                                        font-family: "Poppins";
+                                    }
+                                }
+                            }
+                            .card_genres_wrap {
+                                display: flex;
+                                gap: 8px;
+                                align-items: center;
+                                margin-top: auto;
+                                height: auto;
+
+                                .genres_left {
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                }
+                                .genres_right {
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                    .rate_film_wrap {
+                        width: 43px;
+                        display: flex;
+                        height: 28px;
+                        gap: 3px;
+                        justify-content: end;
+                        align-items: center;
+
+                        .rate_film_mark {
+                            font-family: "Poppins";
+                            font-weight: 600;
+                            font-size: 16px;
+                            line-height: 125%;
+                        }
+                    }
+                }
+            }
+            .pagination {
+                display: flex;
+                margin-top: 24px;
+                justify-content: end;
+            }
+        }
+        .left_side_wrap {
+            display: none;
+            position: absolute;
+            z-index: 10;
+            width: 200px;
+            min-height: 100vh;
+            padding: 26px 24px;
+            background-color: $purple100;
+            .logo {
+                background-color: transparent;
+                width: 100%;
+                svg {
+                    width: 160px;
+                }
+            }
+            .left_side_tabs {
+                display: flex;
+                width: 100%;
+                margin-top: 60px;
+
+                .left_side_tab_active {
+                    background-color: $purple200;
+                    color: $purple500;
+                    font-weight: 700;
+                    border-radius: 8px;
+                    width: 160px;
+                    height: 42px;
+                }
+                .left_side_tab {
+                    background-color: transparent;
+                    color: black;
+                    font-weight: 400;
+                    width: 160px;
+                    height: 42px;
+                }
+            }
+        }
+    }
+    .single_film_wrap {
+        display: flex;
+        padding: 20px 45px 42px 45px; //change
+        width: 760px; //change
+        flex-direction: column;
+        gap: 20px;
+        .head_links_wrap {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            .link {
+                text-decoration: none;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 143%;
+                color: $purple500;
+            }
+            .text {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 100%;
+            }
+        }
+        .single_card_info {
+            display: flex;
+            padding: 24px;
+            background-color: white;
+            gap: 16px;
+            flex-direction: row;
+            .single_card {
+                display: flex;
+                width: 702px;
+                height: 352px;
+                gap: 16px;
+                .empty_card_img {
+                    display: flex;
+                    width: 250px;
+                    height: 352px;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 4px;
+                    background-color: $grey200;
+                    border: 2px solid $grey100;
+
+                    .empty_card_text {
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 133%;
+                        color: $grey500;
+                    }
+                }
+                .card_img {
+                    width: 250px;
+                    height: 352px;
+                }
+                .single_card_descr {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    .single_card_title {
+                        font-weight: 600;
+                        font-size: 20px;
+                        color: $purple500;
+                        font-family: "Poppins";
+                    }
+                    .single_card_year {
+                        font-weight: 400;
+                        font-size: 16px;
+                        color: $grey600;
+                        line-height: 125%;
+                    }
+                    .single_stats {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        .single_star {
+                            display: flex;
+                            align-items: center;
+                            gap: 4px;
+                            .single_star_text {
+                                font-weight: 600;
+                                font-size: 16px;
+                                line-height: 125%;
+                                color: black;
+                                font-family: "Poppins";
+                            }
+                        }
+                        .single_vote {
+                            line-height: 125%;
+                            font-weight: 400;
+                            font-size: 16px;
+                            color: $grey600;
+                        }
+                    }
+                    .single_prop {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: auto;
+
+                        .single_prop_wrap {
+                            display: flex;
+                            gap: 8px;
+                            .prop_name {
+                                min-width: 140px;
+                                font-weight: 400;
+                                font-size: 16px;
+                                color: $grey600;
+                            }
+                            .prop_value {
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 125%;
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+            .single_mark_wrap {
+                display: flex;
+                height: 28px;
+                align-items: center;
+                gap: 4px;
+                .mark_text {
+                    font-weight: 600;
+                    font-family: "Poppins";
+                    font-size: 16px;
+                    line-height: 125%;
+                }
+            }
+        }
+        .trailer_block {
+            display: flex;
+            padding: 24px;
+            background-color: #fff;
+            flex-direction: column;
+            row-gap: 20px;
+            .trailer_title {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 100%;
+            }
+            .empty_trailer {
+                width: 500px;
+                height: 317px;
+                .empty_trailer_text {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 140%;
+                }
+            }
+            .video_block {
+                width: 500px;
+                height: 317px;
+                border-radius: 8px;
+            }
+            .trailer_descr {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 140%;
+            }
+            .production_wrap {
+                display: flex;
+                gap: 12px;
+                flex-direction: column;
+                .production_item {
+                    display: flex;
+                    height: 40px;
+                    gap: 8px;
+                    align-items: center;
+                    .production_item_img {
+                        max-width: 40px;
+                        max-height: 40px;
+                    }
+                    .production_item_text {
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 140%;
+                    }
+                }
+            }
+        }
+    }
+    .rated_search_wrap {
+        margin-top: 20px;
+        display: flex;
+        gap: 0;
+        justify-content: space-between;
+        align-items: center;
+        .rated_title {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 140%;
+            width: 100%;
+        }
+        .rated_searchpanel {
+            width: 490px;
+            height: 48px;
+            padding: 0 12px 0 0;
+            background-color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .searchpanel_input {
+                min-width: 370px;
+                border: none;
+                border-radius: 8px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 143%;
+                cursor: pointer;
+                caret-color: red;
+            }
+            .search_button {
+                width: 88px;
+                height: 32px;
+                border-radius: 8px;
+                font-family: "Poppins";
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 140%;
+            }
+        }
+    }
+    .dropdown {
+        padding: 4px;
+        border-radius: 8px;
+    }
+    .option {
+        max-width: 267px;
+        border-radius: 8px;
+    }
+    .scroll_area {
+        max-height: 260px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+    .movies {
+        width: 540px;
+        .movies_wrap {
+            padding: 20px 20px 42px 20px;
+            width: 540px;
+
+            .movies_title {
+                margin-top: 20px;
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 140%;
+                width: 100%;
+            }
+            .filters_wrap {
+                display: grid;
+                width: 100%;
+                column-gap: 10px;
+                grid-template-columns: auto minmax(0, 245px);
+                grid-template-rows: repeat(2, 72px);
+
+                margin-top: 30px;
+                .loader_wrap {
+                    width: 100%;
+                    display: flex;
+                    justify-content: start;
+                    margin-top: 40px;
+                }
+                .root {
+                    width: auto;
+                    .label {
+                        margin-bottom: 8px;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 140%;
+                    }
+                    .wrapper {
+                        height: 42px;
+                        .input {
+                            border-radius: 8px;
+                            height: 100%;
+                        }
+                        .right_section {
+                            display: flex;
+                        }
+                        .placeholder {
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 143%;
+                            color: $grey500;
+                        }
+                    }
+                }
+                .ratings_wrap {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    // justify-content: space-between;
+                    flex: none;
+                    .rating_root {
+                        max-width: 170px;
+                        .rating_label {
+                            margin-bottom: 8px;
+                            font-weight: 700;
+                            font-size: 16px;
+                            line-height: 140%;
+                        }
+                        .rating_wrapper {
+                            height: 42px;
+
+                            max-width: 170px;
+
+                            .rating_input {
+                                border-radius: 8px;
+                                height: 100%;
+                            }
+                            .rating_right_section {
+                                display: flex;
+                                .rating_wrap {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    gap: 2px;
+                                    right: 12px;
+                                    flex-direction: column;
+                                    .wrap {
+                                        display: flex;
+                                        width: 12px;
+                                        height: 12px;
+                                        align-items: center;
+                                    }
+                                }
+                            }
+                            .rating_placeholder {
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 143%;
+                            }
+                        }
+                    }
+                }
+                .reset_filter {
+                    width: 82px;
+                    margin: auto 0 0 auto;
+                    background-color: transparent;
+                    height: 42px;
+                    padding: 0;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 143%;
+                }
+            }
+            .sort_by {
+                display: flex;
+                justify-content: end;
+                width: 100%;
+                margin-top: 24px;
+                .root {
+                    height: 72px;
+                    width: 283px;
+                    .label {
+                        margin-bottom: 8px;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 140%;
+                    }
+                    .wrapper {
+                        height: 42px;
+                        width: 283px;
+                        .input {
+                            border-radius: 8px;
+                            height: 100%;
+                        }
+                        .right_section {
+                            display: flex;
+                        }
+                        .placeholder {
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 143%;
+                        }
+                    }
+                }
+            }
+            .cards_wrap {
+                display: flex;
+                margin-top: 24px;
+                gap: 16px;
+                width: 100%;
+                background-color: inherit;
+
+                flex-wrap: wrap;
+                flex-direction: row;
+                .loader_wrap {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    margin-top: 24px;
+                    .loader {
+                        display: block;
+                        width: var(--loader-size);
+                        height: var(--loader-size);
+                    }
+                }
+                .empty_films_list {
+                    margin-top: 24px;
+                    height: 400px;
+                    background-color: transparent;
+                    width: 100%;
+                    .empty_img {
+                        display: flex;
+                        justify-content: center;
+                    }
+                    .empty_text {
+                        text-align: center;
+                        margin-top: 16px;
+                        font-weight: 600;
+                        font-size: 20px;
+                        font-family: "Poppins";
+                    }
+                }
+
+                .card_wrap {
+                    display: flex;
+                    padding: 15px;
+                    width: 100%;
+                    height: auto;
+                    background-color: white;
+                    border-radius: 10px;
+                    justify-content: space-between;
+                    gap: 8px;
+
+                    .card {
+                        display: flex;
+                        height: 180px;
+                        gap: 8px;
+                        width: auto;
+
+                        .card_img {
+                            width: 115px;
+                            height: 180px;
+                            border-radius: none;
+                        }
+                        .empty_img {
+                            display: flex;
+                            width: 115px;
+                            height: 200px;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 4px;
+                            border: 1px solid grey;
+                            .text {
+                                font-weight: 500;
+                                font-size: 12px;
+                                line-height: 133%;
+                                color: grey;
+                            }
+                        }
+                        .card_descr {
+                            display: flex;
+                            gap: 5px;
+                            flex-direction: column;
+                            row-gap: 5px;
+                            width: 100%;
+
+                            .card_title {
+                                font-weight: 600;
+                                font-family: "Poppins";
+                                font-size: 18px;
+                            }
+                            .card_year {
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: 125%;
+                            }
+                            .card_rating_wrap {
+                                display: flex;
+                                align-items: center;
+                                gap: 8px;
+                                .card_rating {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 4px;
+                                    .card_rating_text {
+                                        line-height: 125%;
+                                        font-weight: 400;
+                                        font-size: 16px;
+                                    }
+                                    .card_rating_text_grey {
+                                        line-height: 125%;
+                                        font-weight: 600;
+                                        font-size: 16px;
+                                        font-family: "Poppins";
+                                    }
+                                }
+                            }
+                            .card_genres_wrap {
+                                display: flex;
+                                gap: 8px;
+                                align-items: center;
+                                margin-top: auto;
+                                height: auto;
+
+                                .genres_left {
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                }
+                                .genres_right {
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                    .rate_film_wrap {
+                        width: 43px;
+                        display: flex;
+                        height: 28px;
+                        gap: 3px;
+                        justify-content: end;
+                        align-items: center;
+
+                        .rate_film_mark {
+                            font-family: "Poppins";
+                            font-weight: 600;
+                            font-size: 16px;
+                            line-height: 125%;
+                        }
+                    }
+                }
+            }
+            .pagination {
+                display: flex;
+                margin-top: 24px;
+                justify-content: end;
+            }
+        }
+        .left_side_wrap {
+            display: none;
+            position: absolute;
+            z-index: 10;
+            width: 200px;
+            min-height: 100vh;
+            padding: 26px 24px;
+            background-color: $purple100;
+            .logo {
+                background-color: transparent;
+                width: 100%;
+                svg {
+                    width: 160px;
+                }
+            }
+            .left_side_tabs {
+                display: flex;
+                width: 100%;
+                margin-top: 60px;
+
+                .left_side_tab_active {
+                    background-color: $purple200;
+                    color: $purple500;
+                    font-weight: 700;
+                    border-radius: 8px;
+                    width: 160px;
+                    height: 42px;
+                }
+                .left_side_tab {
+                    background-color: transparent;
+                    color: black;
+                    font-weight: 400;
+                    width: 160px;
+                    height: 42px;
+                }
+            }
+        }
+    }
+    .single_film_wrap {
+        display: flex;
+        padding: 20px 25px 42px 25px; //change
+        width: 540px; //change
+        flex-direction: column;
+        gap: 20px;
+        .head_links_wrap {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            .link {
+                text-decoration: none;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 143%;
+                color: $purple500;
+            }
+            .text {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 100%;
+            }
+        }
+        .single_card_info {
+            display: flex;
+            padding: 14px;
+            background-color: white;
+            gap: 8px;
+            flex-direction: row;
+
+            .single_card {
+                display: flex;
+                width: 490px;
+                height: 252px;
+                gap: 8px;
+                .empty_card_img {
+                    display: flex;
+                    width: 250px;
+                    height: 252px;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 4px;
+                    background-color: $grey200;
+                    border: 2px solid $grey100;
+
+                    .empty_card_text {
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 133%;
+                        color: $grey500;
+                    }
+                }
+                .card_img {
+                    width: 150px;
+                    height: 252px;
+                }
+                .single_card_descr {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                    .single_card_title {
+                        font-weight: 600;
+                        font-size: 18px;
+                        color: $purple500;
+                        font-family: "Poppins";
+                    }
+                    .single_card_year {
+                        font-weight: 400;
+                        font-size: 15px;
+                        color: $grey600;
+                        line-height: 125%;
+                    }
+                    .single_stats {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        .single_star {
+                            display: flex;
+                            align-items: center;
+                            gap: 4px;
+                            .single_star_text {
+                                font-weight: 600;
+                                font-size: 15px;
+                                line-height: 125%;
+                                color: black;
+                                font-family: "Poppins";
+                            }
+                        }
+                        .single_vote {
+                            line-height: 125%;
+                            font-weight: 400;
+                            font-size: 15px;
+                            color: $grey600;
+                        }
+                    }
+                    .single_prop {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: auto;
+
+                        .single_prop_wrap {
+                            display: flex;
+                            gap: 6px;
+                            .prop_name {
+                                min-width: 140px;
+                                font-weight: 400;
+                                font-size: 15px;
+                                color: $grey600;
+                            }
+                            .prop_value {
+                                font-weight: 400;
+                                font-size: 15px;
+                                line-height: 125%;
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+            .single_mark_wrap {
+                display: flex;
+                height: 28px;
+                align-items: center;
+                gap: 4px;
+                .mark_text {
+                    font-weight: 600;
+                    font-family: "Poppins";
+                    font-size: 15px;
+                    line-height: 125%;
+                }
+            }
+        }
+        .trailer_block {
+            display: flex;
+            padding: 24px;
+            background-color: #fff;
+            flex-direction: column;
+            row-gap: 20px;
+            width: 100%;
+            .trailer_title {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 100%;
+            }
+            .empty_trailer {
+                width: auto;
+                height: 317px;
+                .empty_trailer_text {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 140%;
+                }
+            }
+            .video_block {
+                width: auto;
+                height: 317px;
+                border-radius: 8px;
+            }
+            .trailer_descr {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 140%;
+            }
+            .production_wrap {
+                display: flex;
+                gap: 12px;
+                flex-direction: column;
+                .production_item {
+                    display: flex;
+                    height: 40px;
+                    gap: 8px;
+                    align-items: center;
+                    .production_item_img {
+                        max-width: 40px;
+                        max-height: 40px;
+                    }
+                    .production_item_text {
+                        font-weight: 700;
+                        font-size: 15px;
+                        line-height: 140%;
+                    }
+                }
+            }
+        }
+    }
+    .rated_search_wrap {
+        margin-top: 20px;
+        display: flex;
+        gap: 0;
+        justify-content: space-between;
+        align-items: center;
+        .rated_title {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 130%;
+            width: 170px;
+        }
+        .rated_searchpanel {
+            width: 325px;
+            height: 48px;
+            padding: 0 12px 0 0;
+            background-color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .searchpanel_input {
+                min-width: 190px;
+                border: none;
+                border-radius: 8px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 130%;
+                cursor: pointer;
+                caret-color: red;
+            }
+            .search_button {
+                width: 88px;
+                height: 32px;
+                border-radius: 8px;
+                font-family: "Poppins";
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 140%;
+            }
+        }
+    }
+    .page404 {
+        padding: 24px;
+        height: 100vh;
+        .page404_logo {
+            background-color: transparent;
+            a {
+                .page404_svg {
+                    width: 179px;
+                    height: 36px;
+                }
+            }
+        }
+        .page404_img {
+            width: 100%;
+            height: auto;
+
+            text-align: center;
+            margin: 128px auto 0;
+        }
+        .page404_text {
+            text-align: center;
+            margin-top: 48px;
+            font-weight: 600;
+            font-size: 20px;
+            font-family: "Poppins";
+        }
+        .page404_button {
+            margin: 16px auto 0 auto;
+            display: block;
+            width: 103px;
+            height: 40px;
+            border-radius: 8px;
+            font-family: "Poppins";
+            background-color: $purple500;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+
+    // .dropdown {
+    //     padding: 4px;
+    //     border-radius: 8px;
+    // }
+    // .option {
+    //     max-width: 267px;
+    //     border-radius: 8px;
+    // }
+    // .scroll_area {
+    //     max-height: 260px;
+    // }
+}
+
+@media (max-width: 575px) and (min-width: 0) {
+    .movies {
+        width: auto;
+        .movies_wrap {
+            padding: 10px 10px 22px 10px;
+            width: 100%;
+
+            .movies_title {
+                margin-top: 20px;
+                font-size: 26px;
+                font-weight: 700;
+                line-height: 140%;
+                width: 100%;
+                text-align: center;
+            }
+            .filters_wrap {
+                display: grid;
+                width: 100%;
+                column-gap: 10px;
+                grid-template-columns: repeat(2, auto);
+                grid-template-rows: repeat(3, 72px);
+                grid-template-areas:
+                    "genres genres"
+                    "year year"
+                    "rate reset";
+
+                margin-top: 30px;
+                .loader_wrap {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 40px;
+                }
+                .root {
+                    width: auto;
+                    grid-column-start: genres;
+                    grid-column-end: year;
+
+                    .label {
+                        margin-bottom: 8px;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 140%;
+                    }
+                    .wrapper {
+                        height: 42px;
+                        .input {
+                            border-radius: 8px;
+                            height: 100%;
+                        }
+                        .right_section {
+                            display: flex;
+                        }
+                        .placeholder {
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 143%;
+                            color: $grey500;
+                        }
+                    }
+                }
+                .ratings_wrap {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+
+                    flex: none;
+                    .rating_root {
+                        max-width: 170px;
+                        .rating_label {
+                            margin-bottom: 8px;
+                            font-weight: 700;
+                            font-size: 16px;
+                            line-height: 140%;
+                        }
+                        .rating_wrapper {
+                            height: 42px;
+
+                            max-width: 170px;
+
+                            .rating_input {
+                                border-radius: 8px;
+                                height: 100%;
+                            }
+                            .rating_right_section {
+                                display: flex;
+                                .rating_wrap {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    gap: 2px;
+                                    right: 12px;
+                                    flex-direction: column;
+                                    .wrap {
+                                        display: flex;
+                                        width: 12px;
+                                        height: 12px;
+                                        align-items: center;
+                                    }
+                                }
+                            }
+                            .rating_placeholder {
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 143%;
+                            }
+                        }
+                    }
+                }
+                .reset_filter {
+                    width: 82px;
+                    margin: auto 0 0 auto;
+                    background-color: transparent;
+                    height: 42px;
+                    padding: 0;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 143%;
+                }
+            }
+            .sort_by {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin-top: 24px;
+                .root {
+                    height: 72px;
+                    width: 100%;
+                    .label {
+                        margin-bottom: 8px;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 140%;
+                    }
+                    .wrapper {
+                        height: 42px;
+                        width: 100%;
+                        .input {
+                            border-radius: 8px;
+                            height: 100%;
+                        }
+                        .right_section {
+                            display: flex;
+                        }
+                        .placeholder {
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 143%;
+                        }
+                    }
+                }
+            }
+            .cards_wrap {
+                display: flex;
+                margin-top: 24px;
+                gap: 16px;
+                width: 100%;
+                background-color: inherit;
+                flex-wrap: wrap;
+                flex-direction: row;
+                .loader_wrap {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    margin-top: 24px;
+                    .loader {
+                        display: block;
+                        width: var(--loader-size);
+                        height: var(--loader-size);
+                    }
+                }
+                .empty_films_list {
+                    margin-top: 24px;
+                    height: 400px;
+                    background-color: transparent;
+                    width: 100%;
+                    .empty_img {
+                        display: flex;
+                        justify-content: center;
+                    }
+                    .empty_text {
+                        text-align: center;
+                        margin-top: 16px;
+                        font-weight: 600;
+                        font-size: 20px;
+                        font-family: "Poppins";
+                    }
+                }
+                .card_wrap {
+                    display: flex;
+                    padding: 10px;
+                    width: 100%;
+                    height: auto;
+                    background-color: white;
+                    border-radius: 10px;
+                    justify-content: space-between;
+                    gap: 6px;
+
+                    .card {
+                        display: flex;
+                        height: 160px;
+                        gap: 8px;
+                        width: auto;
+
+                        .card_img {
+                            width: 90px;
+                            height: 160px;
+                            border-radius: none;
+                        }
+                        .empty_img {
+                            display: flex;
+                            width: 90px;
+                            height: 160px;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 4px;
+                            border: 1px solid grey;
+                            .text {
+                                font-weight: 500;
+                                font-size: 12px;
+                                line-height: 133%;
+                                color: grey;
+                            }
+                        }
+                        .card_descr {
+                            display: flex;
+                            gap: 5px;
+                            height: 160px;
+                            flex-direction: column;
+                            max-width: 190px;
+                            flex-grow: 1;
+                            flex-shrink: 1;
+
+                            .card_title {
+                                font-weight: 600;
+                                font-family: "Poppins";
+                                font-size: 16px;
+                            }
+                            .card_year {
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 125%;
+                            }
+                            .card_rating_wrap {
+                                display: flex;
+                                align-items: center;
+                                gap: 8px;
+                                .card_rating {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 4px;
+                                    .card_rating_text {
+                                        line-height: 125%;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                    }
+                                    .card_rating_text_grey {
+                                        line-height: 125%;
+                                        font-weight: 600;
+                                        font-size: 14px;
+                                        font-family: "Poppins";
+                                    }
+                                }
+                            }
+                            .card_genres_wrap {
+                                display: flex;
+                                gap: 8px;
+                                align-items: center;
+                                margin-top: auto;
+                                height: auto;
+
+                                .genres_left {
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                }
+                                .genres_right {
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                    .rate_film_wrap {
+                        display: flex;
+                        height: 28px;
+                        gap: 3px;
+                        justify-content: end;
+                        align-items: center;
+
+                        .rate_film_mark {
+                            font-family: "Poppins";
+                            font-weight: 600;
+                            font-size: 16px;
+                            line-height: 125%;
+                        }
+                    }
+                }
+            }
+            .pagination {
+                display: flex;
+                margin-top: 24px;
+                justify-content: end;
+            }
+        }
+        .left_side_wrap {
+            display: none;
+            position: absolute;
+            z-index: 10;
+            width: 200px;
+            min-height: 100vh;
+            padding: 26px 24px;
+            background-color: $purple100;
+            .logo {
+                background-color: transparent;
+                width: 100%;
+                svg {
+                    width: 160px;
+                }
+            }
+            .left_side_tabs {
+                display: flex;
+                width: 100%;
+                margin-top: 60px;
+
+                .left_side_tab_active {
+                    background-color: $purple200;
+                    color: $purple500;
+                    font-weight: 700;
+                    border-radius: 8px;
+                    width: 160px;
+                    height: 42px;
+                }
+                .left_side_tab {
+                    background-color: transparent;
+                    color: black;
+                    font-weight: 400;
+                    width: 160px;
+                    height: 42px;
+                }
+            }
+        }
+    }
+    .single_film_wrap {
+        display: flex;
+        padding: 10px 15px 22px 15px; //change
+        width: 100%; //change
+        flex-direction: column;
+        gap: 10px;
+        .head_links_wrap {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            .link {
+                text-decoration: none;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 143%;
+                color: $purple500;
+            }
+            .text {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 100%;
+            }
+        }
+        .single_card_info {
+            margin-top: 10px;
+            display: flex;
+            padding: 10px;
+            background-color: white;
+            height: 100%;
+            gap: 8px;
+            .single_card {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                height: 100%;
+                .empty_card_img {
+                    display: flex;
+                    width: 100%;
+                    height: 332px;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 4px;
+                    background-color: $grey200;
+                    border: 2px solid $grey100;
+
+                    .empty_card_text {
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 133%;
+                        color: $grey500;
+                    }
+                }
+                .card_img {
+                    width: 100%;
+                    height: 332px;
+                }
+                .single_card_descr {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                    height: 100%;
+                    .single_card_title {
+                        font-weight: 600;
+                        font-size: 20px;
+                        color: $purple500;
+                        font-family: "Poppins";
+                    }
+                    .single_card_year {
+                        font-weight: 400;
+                        font-size: 16px;
+                        color: $grey600;
+                        line-height: 125%;
+                    }
+                    .single_stats {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        .single_star {
+                            display: flex;
+                            align-items: center;
+                            gap: 4px;
+                            .single_star_text {
+                                font-weight: 600;
+                                font-size: 16px;
+                                line-height: 125%;
+                                color: black;
+                                font-family: "Poppins";
+                            }
+                        }
+                        .single_vote {
+                            line-height: 125%;
+                            font-weight: 400;
+                            font-size: 16px;
+                            color: $grey600;
+                        }
+                    }
+                    .single_prop {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: auto;
+
+                        .single_prop_wrap {
+                            display: flex;
+                            gap: 6px;
+                            .prop_name {
+                                min-width: 140px;
+                                font-weight: 400;
+                                font-size: 16px;
+                                color: $grey600;
+                            }
+                            .prop_value {
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 125%;
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+            .single_mark_wrap {
+                display: flex;
+                height: 28px;
+                align-items: center;
+                gap: 4px;
+                .mark_text {
+                    font-weight: 600;
+                    font-family: "Poppins";
+                    font-size: 15px;
+                    line-height: 125%;
+                }
+            }
+        }
+        .trailer_block {
+            display: flex;
+            padding: 24px;
+            background-color: #fff;
+            flex-direction: column;
+            row-gap: 20px;
+            width: 100%;
+            .trailer_title {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 100%;
+            }
+            .empty_trailer {
+                width: auto;
+                height: 317px;
+                .empty_trailer_text {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 140%;
+                }
+            }
+            .video_block {
+                width: auto;
+                height: 200px;
+                border-radius: 8px;
+            }
+            .trailer_descr {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 140%;
+            }
+            .production_wrap {
+                display: flex;
+                gap: 12px;
+                flex-direction: column;
+                .production_item {
+                    display: flex;
+                    height: 40px;
+                    gap: 8px;
+                    align-items: center;
+                    .production_item_img {
+                        max-width: 40px;
+                        max-height: 40px;
+                    }
+                    .production_item_text {
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 140%;
+                    }
+                }
+            }
+        }
+    }
+    .rated_search_wrap {
+        margin-top: 20px;
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        .rated_title {
+            text-align: center;
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 130%;
+        }
+        .rated_searchpanel {
+            width: auto;
+            height: 48px;
+            padding: 0 12px 0 0;
+            background-color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .searchpanel_input {
+                min-width: 190px;
+                border: none;
+                border-radius: 8px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 130%;
+                cursor: pointer;
+                caret-color: red;
+            }
+            .search_button {
+                width: 88px;
+                height: 32px;
+                border-radius: 8px;
+                font-family: "Poppins";
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 140%;
+            }
+        }
+    }
+    .page404 {
+        padding: 24px;
+        height: 100vh;
+        .page404_logo {
+            background-color: transparent;
+            a {
+                .page404_svg {
+                    width: 179px;
+                    height: 36px;
+                }
+            }
+        }
+        .page404_img {
+            width: 100%;
+            height: auto;
+
+            text-align: center;
+            margin: 128px auto 0;
+        }
+        .page404_text {
+            text-align: center;
+            margin-top: 48px;
+            font-weight: 600;
+            font-size: 20px;
+            font-family: "Poppins";
+        }
+        .page404_button {
+            margin: 16px auto 0 auto;
+            display: block;
+            width: 103px;
+            height: 40px;
+            border-radius: 8px;
+            font-family: "Poppins";
+            background-color: $purple500;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+
+    // .dropdown {
+    //     padding: 4px;
+    //     border-radius: 8px;
+    // }
+    // .option {
+    //     max-width: 267px;
+    //     border-radius: 8px;
+    // }
+    // .scroll_area {
+    //     max-height: 260px;
+    // }
+}

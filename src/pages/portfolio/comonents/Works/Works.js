@@ -23,8 +23,8 @@ const Works = () => {
         },
         {
             id: 3,
-            text: "Text about app",
-            link: "#",
+            text: "App about films",
+            link: "arrowflicks",
             img: project,
         },
     ];

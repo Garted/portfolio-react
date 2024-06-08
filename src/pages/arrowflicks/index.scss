@@ -1,0 +1,12 @@
+@import "./fonts/stylesheet.scss";
+
+* {
+    margin: 0;
+    font-family: "Inter", "Poppins" sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+iframe#webpack-dev-server-client-overlay {
+    display: none !important;
+}
