@@ -31,7 +31,7 @@ const FilmCard = ({ filmsList, open, setRateFilm, style }) => {
                                     ) : (
                                         <Image
                                             className={style.card_img}
-                                            src={`http://localhost:3000/api/img${item.img}`}
+                                            src={`https://server-weld-nine.vercel.app/api/img${item.img}`}
                                         />
                                     )}
                                     <Flex className={style.card_descr}>

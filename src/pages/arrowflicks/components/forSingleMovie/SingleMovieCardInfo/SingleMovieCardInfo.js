@@ -19,7 +19,7 @@ const SingleMovieCardInfo = ({
                 ) : (
                     <Image
                         className={style.card_img}
-                        src={`http://localhost:3000/api/bigimg${singleMovieInfo.img}`}
+                        src={`https://server-weld-nine.vercel.app/api/bigimg${singleMovieInfo.img}`}
                     />
                 )}
 
