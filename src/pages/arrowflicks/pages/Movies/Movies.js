@@ -40,6 +40,7 @@ const Movies = ({
         return str;
     };
     const requestString = generateRequestString(value);
+    console.log(requestString);
     useEffect(() => {
         loadData(requestString);
     }, [requestString]);

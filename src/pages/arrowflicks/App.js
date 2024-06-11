@@ -10,7 +10,6 @@ import { useEffect, useState } from "react";
 import { useDisclosure } from "@mantine/hooks";
 import ModalRating from "./components/modal/ModalRating";
 import sty from "./modules/App.module.scss";
-import Pag4 from "../asdd/Pag4";
 
 function App() {
     const [activeTab, setActiveTab] = useState("/arrowflicks");
@@ -95,7 +94,7 @@ function App() {
                         />
                     }
                 />
-                {/* <Route path="*" element={Pag4}></Route> */}
+
                 <Route
                     path="*"
                     element={

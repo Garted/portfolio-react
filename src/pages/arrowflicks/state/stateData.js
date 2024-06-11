@@ -41,7 +41,6 @@ export const useStateData = () => {
                 console.log(error);
             });
     };
-
     const loadInfoForSingleMovie = (str) => {
         Promise.all([fetchSingleMovie(str), fetchTrailerForSingleMovie(str)])
             .then(([info, trailer]) => {
