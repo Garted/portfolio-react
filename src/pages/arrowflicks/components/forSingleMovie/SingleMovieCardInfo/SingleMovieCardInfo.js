@@ -19,7 +19,7 @@ const SingleMovieCardInfo = ({
                 ) : (
                     <Image
                         className={style.card_img}
-                        src={`https://image.tmdb.org/t/p/w200${singleMovieInfo.img}`}
+                        src={`http://localhost:3000/api/bigimg${singleMovieInfo.img}`}
                     />
                 )}
 
