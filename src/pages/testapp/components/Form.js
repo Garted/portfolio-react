@@ -103,16 +103,23 @@ const Form = ({
                     value="Войти"
                     onClick={() => {
                         if (
-                            base.filter(
-                                (item) =>
-                                    item.name === userData.name &&
-                                    item.password === userData.password
-                            ).length > 0
+                            base.filter((item) => item.name === userData.name)
+                                .length > 0
                         ) {
-                            setActiveUser(userData.name);
-                            setClose(true);
-                            setUserError(null);
-                            setUserData({ name: "", password: "" });
+                            if (
+                                base.filter(
+                                    (item) =>
+                                        item.name === userData.name &&
+                                        item.password === userData.password
+                                ).length > 0
+                            ) {
+                                setActiveUser(userData.name);
+                                setClose(true);
+                                setUserError(null);
+                                setUserData({ name: "", password: "" });
+                            } else {
+                                setUserError("Неправильный пароль");
+                            }
                         } else {
                             setUserError("Такого пользователя нет");
                         }
@@ -122,11 +129,8 @@ const Form = ({
                     disabled={userData.name === "" || userData.password === ""}
                     onClick={() => {
                         if (
-                            base.filter(
-                                (item) =>
-                                    item.name === userData.name &&
-                                    item.password === userData.password
-                            ).length > 0
+                            base.filter((item) => item.name === userData.name)
+                                .length > 0
                         ) {
                             setUserError("Такой пользователь уже существует");
                         } else {
