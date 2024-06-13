@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio-react/static/css/main.cbd2f86f.css",
-    "main.js": "/portfolio-react/static/js/main.c34ea0ea.js",
+    "main.css": "/portfolio-react/static/css/main.f8aa283e.css",
+    "main.js": "/portfolio-react/static/js/main.ee36a18c.js",
     "static/media/video.mp4": "/portfolio-react/static/media/video.f48965b8dbb9085a97da.mp4",
     "static/media/Ubuntu-Regular.ttf": "/portfolio-react/static/media/Ubuntu-Regular.1cbb1b79a23478cc89ad.ttf",
     "static/media/Ubuntu-Bold.ttf": "/portfolio-react/static/media/Ubuntu-Bold.fec2d0f1431a6114a6ce.ttf",
@@ -10,6 +10,7 @@
     "static/media/Inter-SemiBold.woff": "/portfolio-react/static/media/Inter-SemiBold.32d2b120ef93cc3476b5.woff",
     "static/media/Inter-Medium.woff": "/portfolio-react/static/media/Inter-Medium.f54039e3202e9ad4fe3c.woff",
     "static/media/Inter-Regular.woff": "/portfolio-react/static/media/Inter-Regular.14eb94309ed41d1cb84a.woff",
+    "static/media/test_img.jpg": "/portfolio-react/static/media/test_img.33e48f1e2f70b554903a.jpg",
     "static/media/projP.jpg": "/portfolio-react/static/media/projP.77ac5b7a73b206f667ef.jpg",
     "static/media/Inter-Bold.woff2": "/portfolio-react/static/media/Inter-Bold.ef4f1fa4544b2a5eaf2c.woff2",
     "static/media/Inter-SemiBold.woff2": "/portfolio-react/static/media/Inter-SemiBold.3752195ecfc6873de6cf.woff2",
@@ -25,9 +26,15 @@
     "static/media/rick_and_morty.webp": "/portfolio-react/static/media/rick_and_morty.25ddc14dd9f1c294fc96.webp",
     "static/media/Poppins-SemiBold.woff2": "/portfolio-react/static/media/Poppins-SemiBold.788fab5cbac156458b2e.woff2",
     "static/media/bg-image.webp": "/portfolio-react/static/media/bg-image.948e8e93a7296308d33d.webp",
+    "static/media/Manrope-SemiBold.woff": "/portfolio-react/static/media/Manrope-SemiBold.d804553340fb5764fc65.woff",
+    "static/media/Manrope-Regular.woff": "/portfolio-react/static/media/Manrope-Regular.5fac8aa560ef4c360b65.woff",
+    "static/media/Manrope-Medium.woff": "/portfolio-react/static/media/Manrope-Medium.3aa533627ece3c7f3af8.woff",
     "static/media/Image404.jpg": "/portfolio-react/static/media/Image404.19cbf02fc1f731303050.jpg",
     "static/media/client-logo2.svg": "/portfolio-react/static/media/client-logo2.f59a3ce8f2492b30d20aeb69cc432520.svg",
     "static/media/building.webp": "/portfolio-react/static/media/building.d9f594ca50062835e24f.webp",
+    "static/media/Manrope-SemiBold.woff2": "/portfolio-react/static/media/Manrope-SemiBold.174a7d7643774f5ddf85.woff2",
+    "static/media/Manrope-Regular.woff2": "/portfolio-react/static/media/Manrope-Regular.11fc740536397a6512f8.woff2",
+    "static/media/Manrope-Medium.woff2": "/portfolio-react/static/media/Manrope-Medium.87883325178df25a3509.woff2",
     "static/media/client-logo.svg": "/portfolio-react/static/media/client-logo.0de7b6db3b71622f3f00042bd8fac23a.svg",
     "static/media/client-logo3.svg": "/portfolio-react/static/media/client-logo3.b42bbd393d99511d91ea8d1271cc43fd.svg",
     "static/media/client-logo4.svg": "/portfolio-react/static/media/client-logo4.22280de82d2c73c72843181a3e9fb93b.svg",
@@ -45,11 +52,11 @@
     "static/media/ellipse-orange.svg": "/portfolio-react/static/media/ellipse-orange.8ce59ee005e61a7952ff.svg",
     "static/media/ellipse-blue.svg": "/portfolio-react/static/media/ellipse-blue.d22b7b4772dfedffd1fe.svg",
     "static/media/ellipse-green.svg": "/portfolio-react/static/media/ellipse-green.317a97f040e6b03d68c5.svg",
-    "main.cbd2f86f.css.map": "/portfolio-react/static/css/main.cbd2f86f.css.map",
-    "main.c34ea0ea.js.map": "/portfolio-react/static/js/main.c34ea0ea.js.map"
+    "main.f8aa283e.css.map": "/portfolio-react/static/css/main.f8aa283e.css.map",
+    "main.ee36a18c.js.map": "/portfolio-react/static/js/main.ee36a18c.js.map"
   },
   "entrypoints": [
-    "static/css/main.cbd2f86f.css",
-    "static/js/main.c34ea0ea.js"
+    "static/css/main.f8aa283e.css",
+    "static/js/main.ee36a18c.js"
   ]
 }
