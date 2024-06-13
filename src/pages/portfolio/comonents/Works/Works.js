@@ -27,6 +27,12 @@ const Works = () => {
             link: "arrowflicks",
             img: project,
         },
+        {
+            id: 4,
+            text: "Test app",
+            link: "testapp",
+            img: project,
+        },
     ];
 
     return (

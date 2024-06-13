@@ -1,0 +1,53 @@
+.user_wrap {
+    display: flex;
+    justify-content: end;
+    height: 30px;
+    color: #244c98;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    .user {
+        position: relative;
+        .legend {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f9f9f9;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ccc;
+            z-index: 1;
+            button {
+                cursor: pointer;
+                background-color: #f9f9f9;
+            }
+        }
+        &:hover {
+            .legend {
+                display: block;
+            }
+        }
+    }
+    .register {
+        align-items: center;
+        background-color: #244c98;
+        border-radius: 25px;
+        color: white;
+        font-size: 15px;
+        font-weight: 500;
+        justify-content: center;
+        display: flex;
+        width: 120px;
+        height: 30px;
+        border: 1px solid black;
+        cursor: pointer;
+        &:hover {
+            transition: all 0.3s ease;
+            background-color: rgb(97, 39, 244);
+        }
+        &:active {
+            transform: all 1s ease;
+            background-color: rgb(69, 65, 74);
+        }
+    }
+}
